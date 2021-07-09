@@ -126,7 +126,7 @@ def sgin_hsp(request):
     return render(request, 'sgin_hsp.html')
 
 @login_required
-@user_required
+@hospital_required
 def sginpg_hsp(request):
     hos_data = hspinfo.objects.filter(user = request.user.id)
     hosp = {
@@ -135,7 +135,7 @@ def sginpg_hsp(request):
     return render(request, 'sginpg_hsp.html', hosp)
 
 @login_required
-@user_required
+@hospital_required
 def update_data(request):
     this_hsp = hspinfo.objects.get(user = request.user.id)
     usr_inf = my_usr.objects.get(email = request.user.email)
@@ -170,7 +170,7 @@ def update_data(request):
     return render(request, 'hsp_edit.html', hosp)
 
 @login_required
-@user_required
+@hospital_required
 def change_pass_hsp(request):
     if request.method == 'POST':
         fm = PasswordChangeForm(user=request.user, data=request.POST)
