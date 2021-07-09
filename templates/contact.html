@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact{
+            position: relative;
+            min-height: 100vh;
+            padding: 50px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=753&q=80);
+            background-size: cover;
+        }
+
+        .contact .content{
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .contact .content h2{
+            font-size: 36px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .contact .content p{
+            font-weight: 300;
+            color: #fff;
+        }
+
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .container .contactInfo{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15rem;
+        }
+
+        .container .contactInfo .box{
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+        }
+
+        .container .contactInfo .box .icon{
+            min-width: 60px;
+            height: 60px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+
+        .container .contactInfo .box .text{
+            display: flex;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #fff;
+            flex-direction: column;
+            font-weight: 500;
+        }
+
+        .container .contactInfo .box .text h2{
+            font-weight: 800;
+            color: #000000;
+        }
+
+        .contactForm{
+            width: 40%;
+            padding: 40px;
+            background: #fff;
+            border-radius: 1.5rem;
+        }
+
+        .contactForm h2{
+            font-size: 30px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .contactForm .inputBox{
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .contactForm .inputBox input,
+        .contactForm .inputBox textarea{
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            resize: none;
+        }
+
+        .contactForm .inputBox p{
+            position: absolute;
+            left: 0;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: .5s;
+            color: #666;
+        }
+
+        .contactForm .inputBox .sbmt{
+            width: fit-content;
+            background: #ff6803;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: .5rem;
+        }
+
+        .contactForm .inputBox .sbmt:hover{
+            background: #ff9901;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="contact">
+        {% for message in messages %}
+            <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+            <strong>SUCCESS:</strong> {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Need Help ? <br> Feel free to contact us for any queries/suggestions !</p>
+        </div>
+
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker-alt" aria-hidden="true"></i></div>
+                    <div class="text">
+                    <h2>Address</h2>
+                    <p>Tilak road, Shree Buildings, Main Floor, Pune-411030</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="text">
+                    <h2>Email</h2>
+                    <p>hospital.demo.007@gmail.con</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                    <h2>Phone</h2>
+                    <p>1234567890</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contactForm">
+                <form action="contact" method="POST">
+                    {% csrf_token %}
+                    <h2 style="text-align: center;">Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" required placeholder="Full Name" name="fname">
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" required placeholder="Your Email" name="email">
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" required placeholder="Your Phone" name="phnum">
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" class="sbmt" value="Send Message">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+</html>
