@@ -6,6 +6,7 @@ from django.contrib.auth import logout, login
 from django.contrib.auth.decorators import login_required
 from .forms import HospitalReg, UserReg
 from django.views.generic import CreateView
+from .decorators import user_required, hospital_required
 from django.contrib import messages
 from django.contrib.auth.forms import PasswordChangeForm
 from .models import User as my_usr
