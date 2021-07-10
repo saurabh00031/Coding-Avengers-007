@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+
+    <style>
+        .css-serial{
+            counter-reset: serial-number;
+            text-align: center;
+        }
+        .css-serial td:first-child::before{
+            counter-increment: serial-number;
+            content: counter(serial-number);
+        }
+td{
+    font-size:30px;
+    color:white;
+}
+th{
+    font-size:20px;
+    
+    
+}
+body{
+   background-repeat:no-repeat;
+   background-size:100% 500%;
+   
+
+}
+h1{
+    color:white;
+    background:blue;
+}
+
+
+    </style>
+</head>
+<body>
+    <body background="https://images.unsplash.com/photo-1611275156493-e4a470c02ddb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHdhdGVyJTIwc3BsYXNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60 ">
+    {% if ct %}
+    <h1>Search Results:</h1>
+    <marquee style="background:yellow; font-size:30px;"> MATCH THE RESULTS HERE</marquee>
+    <br>
+
+    <br><br><br><br><br><br>
+    {% else %}
+    <h1>No match found!</h1>
+
+    {% endif %}
+    <div>
+    <center>
+    <b>
+        <table class="css-serial" border="2px" cellpsacing="10px" cellpadding="5px" width="90%">
+            <tr>
+            <th style="background:yellow;">Sr. No.</th>
+            <th style="background:orange;">CITY</th>
+            <th style="background:cyan;" >HOSPITAL NAME</th>
+            <th style="background:pink;" >City</th>
+            <th style="background:yellow;" >Address</th>
+            </tr>
+            {% for i in ct %}
+            <tr>
+                <td></td>
+                <td>{{i.city}}</td>
+                <td>{{i.hospital_Name}}</td>
+                <td>{{i.phone}}</td>
+                <td>{{i.address}}</td>
+
+
+            </tr>
+            {% endfor %}
+        </table>
+        </b>
+        </center>
+    </div>
+    <br><br><br><br><br><br>
+ <marquee style="background:red; font-size:30px;">.</marquee>
+    
+</body>
+</html>
