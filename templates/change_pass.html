@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/register.css">
+<style>
+body, html {
+  height: 100%;
+}
+.bg {
+  
+  background-image: url(https://cdn.pixabay.com/photo/2017/03/25/17/55/colorful-2174045__340.png);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+</style>
+</head>
+<body>
+<div class="bg">
+     <center>
+     <br>    
+        <span style="background:yellow; font-size: 2rem; border-radius: 1rem;"> CHANGE THE PASSWORD</span>
+        <marquee style="font-size:1.5rem; color:whitesmoke; background-color: rgb(132, 0, 255); border-radius: 1rem;">Here you can change your password</marquee>
+        <hr>
+        <br>
+    </center>
+
+    <center>
+<form action="" method="POST">
+        {% csrf_token %}
+       <b> {{form.as_p}}</b>
+        <div class="sbmt">
+            <button type="submit">Save</button>
+        </div>
+    </form>
+    <br>
+    <hr>
+    </center>
+    <div>
+</body>
+</html>
