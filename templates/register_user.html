@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Register - User</title>
+<style>
+    h1{
+        color: red;
+        font-family: cursive;
+        font-weight: bolder;
+    }
+    body{background-image: url(https://thumbs.dreamstime.com/b/old-blue-grey-distressed-background-faint-vintage-texture-messy-paper-soft-mottled-blur-effect-antique-parchment-design-213648237.jpg);
+        background-repeat: no-repeat;
+            background-size: cover;
+    }  
+    .body{
+            margin: 0 auto;
+            width: 70%;	 
+            clear: both;
+            } 
+    .form-group{
+        font-weight: bolder;
+        font-size: x-large;
+        
+    }              
+    hr{
+        color: black;
+    }
+</style>
+    <link rel="stylesheet" href="/static/register.css">
+</head>
+<body class="body">
+    <h1 style="text-align: center; ">User Registration</h1><br>
+    <hr>
+    <div class="form-group">
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="sbmt">
+            <button style="background-color:blue; font-size:20px" type="submit">Register</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
