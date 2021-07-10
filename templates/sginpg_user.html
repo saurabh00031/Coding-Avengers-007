@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signed In - User</title>
+
+    <style>
+        .css-serial{
+            counter-reset: serial-number;
+            text-align: center;
+        }
+        .css-serial td:first-child::before{
+            counter-increment: serial-number;
+            content: counter(serial-number);
+        }
+td{
+    font-size:30px;
+    
+}
+th{
+    font-size:20px;
+    
+}
+body{
+   background-repeat:no-repeat;
+   background-size:100% 300%;
+
+}
+
+
+    </style>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+ <body background="https://images.unsplash.com/photo-1580596090683-f4711170117b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdhdGVyJTIwc3BsYXNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60 ">
+    
+
+   <center><h1 style="color:red;font-size:50px;"> *Welcome {{request.user}}*</h1></center>
+   <marquee style="color:blue; font-size:30px;">KINDLY WATCH THE DATA FOR MAIKING DECISIONS </marquee>
+
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        <strong>WARNING:</strong> {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+   <center> <a href="usr_edit"><button style="color:white; background:blue; font-size:30px;" type="button">Update Profile</button></a>
+    <a href="change_pass_usr"><button style="color:white; background:blue; font-size:30px;" type="button" >Change Password</button></a></center>
+    <hr>
+    <br>
+    <center>
+    <div class="srch">
+        <form action="/search" method="GET">
+            <div class="srch-btn">
+                <input style="color:red; font-size:30px; width:73%" type="text" name="search"  placeholder="Search hospital by city" id="">
+            <button style="font-size:30px; background:cyan ;" class="srbtn" type="submit" placeholder="Search hospital by city" required>Search</button>
+            </div>
+        </form>
+    </div>
+    <p>Hospitals</p>
+</center>
+
+    
+    <center>
+    <table class="css-serial table-bordered" border="2" cellspacing="10px" cellpadding="5px">
+        <tr>
+            <th style="background:yellow;">Sr. No.</th>
+            <th style="background:orange;">Hospital Name</th>
+            <th style="background:cyan;" >Phone</th>
+            <th style="background:pink;" >City</th>
+            <th style="background:yellow;" >Address</th>
+            <th style="background:orange;">Available Beds</th>
+            <th style="background:cyan;" >Available Ventilators</th>
+            <th style="background:pink;">Available Vaccines</th>
+        </tr>
+        {% for i in hosp_info %}
+        <tr>
+            <td style="background:yellow;"></td>
+            <td style="background:orange;">{{i.hospital_Name}}</td>
+            <td style="background:cyan;">{{i.phone}}</td>
+            <td style="background:pink;">{{i.city}}</td>
+            <td style="background:yellow;">{{i.address}}</td>
+            <td style="background:orange;">{{i.no_of_beds}}</td>
+            <td style="background:cyan;">{{i.no_of_ventilators}}</td>
+            <td style="background:pink;">{{i.no_of_vaccines}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </center>
+    <br>
+    <br>
+    <center><button style="font-size:40px; "><a href="sout">Sign Out</a></button></center>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+</html>
