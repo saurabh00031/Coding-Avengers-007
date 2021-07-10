@@ -1,161 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="cache-control" content="max-edge=0"/>
-    <meta http-equiv="cache-control" content="no-cache"/>
-    <meta http-equiv="expires" content="0"/>
-    <meta http-equiv="expires" content="Sun,11 July 2021"/>
-    <meta http-equiv="pragma" content="no-cache"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <title>Registration</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="cache-control" content="max-edge=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Sun,11 July 2021" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
-    <style>
-        body{
-            background: url(https://cdn.pixabay.com/photo/2018/04/30/08/08/business-3362081__480.jpg);
-            background-repeat: y-repeat;
-            background-size: cover;
-        }
+    <link rel="shortcut icon" href="../static/favicon_circle.ico" type="image/x-icon">
+  <title>Home Page</title>
 
-        .crd{
-            font-size: 2rem;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            padding-right: 6rem;
-            padding-top: 1.5rem;
-            margin-bottom: 2px;
-        }
-        .crd a{
-            color:black;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .crd a:hover{
-            color: gold;
-            background-color: rgb(225, 142, 65);
-            border: 1px solid peachpuff;
-            border-radius: 1rem;
-        }
-       .container-fluid
-       {
-         background-color:black;   
-            
-          background-size: cover;]
-          width:300px;
-       }
+  <style>
+    body {
+      background: url(https://cdn.pixabay.com/photo/2018/04/30/08/08/business-3362081__480.jpg);
+      background-repeat: y-repeat;
+      background-size: cover;
+    }
+
+    .crd {
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding-right: 6rem;
+      margin-bottom: 2px;
+    }
+
+    .crd a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .crd a:hover {
+      color: gold;
+      background-color: rgb(225, 142, 65);
+      border: 1px solid peachpuff;
+      border-radius: 1rem;
+    }
+
+    .container-fluid {
+      background-color: black;
+
+      background-size: cover;
+      width: 300px;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem;
+      background: #222;
+      margin-top: 1.8rem;
+    }
+
+    .footer .credit {
+      font-size: 2rem;
+      color: #eee;
+    }
     
+    .footer .credit p {
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+    }
 
-    
+    .footer .icons a {
+      font-size: 1.5rem;
+      margin: 0 .5rem;
+      height: 3rem;
+      width: 3rem;
+      line-height: 2.5rem;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+      color: #fff;
+      border: .2rem solid #fff;
+      transition: .2s linear;
+    }
 
-      
-       
-       .fgh
-       {
-         background-color:black;
-       }
-  
+    #fb:hover {
+      background: rgb(8, 69, 201);
+    }
 
+    #twit:hover {
+      background: rgb(0, 153, 255);
+    }
 
-    </style>
+    #insta:hover {
+      background: linear-gradient(blue, orange, yellow);
+    }
+
+    #git:hover {
+      background: white;
+      color: black;
+    }
+
+    #glg:hover{
+      background: white;
+      color: red;
+    }
+
+    #lin:hover{
+      background: rgb(55, 55, 255);
+      color: white;
+    }
+
+    #pin:hover{
+      background: red;
+      color: white;
+    }
+
+  </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href=" ">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="about">About us</a>
-            <a class="nav-item nav-link " href="contact">Contact us</a>
-            <a class="nav-item nav-link" href="c19_info">Information</a>
-          </div>
-        </div>
-      </nav>
 
-    <h1 style="color: #c71010; text-align: center; font-size: 4rem;">Welcome Friends ....</h1>
-    
-    <div class="crd">
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Contactless Systems</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href=" ">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="about">About us</a>
+        <a class="nav-item nav-link " href="contact">Contact us</a>
+        <a class="nav-item nav-link" href="c19_info">Information</a>
+      </div>
+    </div>
+  </nav>
+
+  <h1 style="color: #c71010; text-align: center; font-size: 4rem;">Welcome Friends ....</h1>
+
+  <div class="crd">
     <a style=" margin-bottom: -20px; margin-top:35px" href="register_hsp">Hospital Registeration !</a> <br>
     <a style=" margin-bottom: -20px;" href="register_user">User Registeration !</a> <br>
     <a style=" margin-bottom: -20px;" href="sgin_hsp"> Hospital Sign In !</a> <br>
-    <a href="sgin_user">  User Sign In !</a> <br>
-    </div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<!-- Footer -->
-  </center>
-
-<center>
-  <!-- Footer Elements -->
-  <div class="container-fluid" >
-
-    <!-- Grid row-->
-    <div class="row">
-
-      <!-- Grid column -->
-      
-<div class="col-md-20 py-5 px-0">
-        <div class="mb-5 ">
-          <!-- Facebook -->
-          <a class="fb-ic" href="https://touch.facebook.com/profile.php?ref=bookmarks ">
-            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!-- Twitter -->
-          <a class="tw-ic" href=" https://mobile.twitter.com/Saurabh04373191">
-            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!-- Google +-->
-          <a class="gplus-ic" href=" https://www.instagram.com/saurabhpatil1771?r=nametag">
-            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Linkedin -->
-          <a class="li-ic"href=" https://www.instagram.com/saurabhpatil1771?r=nametag" >
-            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Instagram-->
-          <a class="ins-ic" href=" https://www.instagram.com/saurabhpatil1771?r=nametag">
-            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Pinterest-->
-          <a class="pin-ic" href="https://www.pinterest.it/patilsaurabh7777777/ ">
-            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-          </a>
-        </div>
-      </div>
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row-->
-
+    <a href="sgin_user"> User Sign In !</a> <br>
   </div>
-  <!-- Footer Elements -->
 
-  <!-- Copyright -->
-  <div class="fgh">
-  <p style="color:white;">©2021 Copyright:</p>
-    <a style="background:black; color:white" href ="https://mdbootstrap.com/"> $4 members</a>
-  </div>
-  </center>
-  
+  <section class="footer">
 
+    <h1 class="credit">
+      <p>Copyright &copy; 2021 - All Rights Reserved</p>
+    </h1>
 
+    <div class="icons">
+      <a href="https://touch.facebook.com/profile.php?ref=bookmarks " class="fab fa-facebook-f" id="fb"></a>
+      <a href="https://mobile.twitter.com/Saurabh04373191" class="fab fa-twitter" id="twit"></a>
+      <a href="https://www.instagram.com/saurabhpatil1771?r=nametag" class="fab fa-instagram" id="insta"></a>
+      <a href="https://github.com/saurabh00031" class="fab fa-github" id="git"></a>
+      <a href="https://www.instagram.com/saurabhpatil1771?r=nametag" class="fab fa-google" id="glg"></a>
+      <a href="https://www.instagram.com/saurabhpatil1771?r=nametag" class="fab fa-linkedin" id="lin"></a>
+      <a href="https://www.pinterest.it/patilsaurabh7777777/ " class="fab fa-pinterest" id="pin"></a>
+    </div>
 
+  </section>
 
 </body>
-</html>
 
-
-</body>
 </html>
