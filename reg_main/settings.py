@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import django_heroku
 import os
 
 from pathlib import Path
@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#nj5$o2ji-ey&$ghp*@v*2feww+aj-*7h%l4r25iozyigwz!ra'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'share-to-care.herokuapp.com']
 
 AUTH_USER_MODEL = 'reg.User'
 
@@ -147,4 +147,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'hospital.demo.007@gmail.com'
 EMAIL_HOST_PASSWORD = 'qspsbmctdhljwfzp'
 
-
+django_heroku.settings(locals())
