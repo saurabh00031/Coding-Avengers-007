@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header .lgin{
+    text-align: center;
+    font-size: 4rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+
+.container input{
+    font-size: 2rem;
+}
+
+.usname, .psw{
+    padding-top: 1rem;
+}
+
+.sin{
+    padding-top: 1rem;
+}
+
+.sin button{
+    background-color: navy;
+    color: white;
+    height: 3rem;
+    width: 10rem;
+}
