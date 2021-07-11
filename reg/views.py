@@ -18,6 +18,18 @@ def about(request):
     return render(request, 'about.html')
 
 def contact(request):
+    if request.method == 'POST':
+        fname = request.POST.get('fname')
+        usr_eml = request.POST.get('email')
+        phone = request.POST.get('phnum')
+        message = request.POST['message']
+        send_mail(fname,
+                    "User Phone:-  "+phone+"\n"+"User Email:- "+usr_eml+"\n"+message,
+                    usr_eml,
+                    ['hospital.demo.007@gmail.com'],
+                    fail_silently=True)
+        messages.success(request, 'Thank you for the message! We\'ll respond to you shortly!!')  
+        
     return render(request, 'contact.html')
 
 def c19_info(request):
