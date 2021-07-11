@@ -44,6 +44,8 @@ Then copy the url and paste it in any of the browser.
 
 Now on browser you will see the main dashboard of our website.
 
+Or you can refer the deployed link at (" https://share-to-care.herokuapp.com ").
+
 *** How to daownload the source-code of our web...!! ***
 
 To download the source-code visit our github repository.
