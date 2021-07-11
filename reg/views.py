@@ -10,6 +10,7 @@ from .decorators import user_required, hospital_required
 from django.contrib import messages
 from django.contrib.auth.forms import PasswordChangeForm
 from .models import User as my_usr
+from django.core.mail import send_mail
 
 def index(request):
     return render(request, 'index.html')
