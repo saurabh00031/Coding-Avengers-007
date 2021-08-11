@@ -65,12 +65,6 @@ everyone.
 " Flowers always make people better, happier, and more helpful; they are 
 sunshine, food and medicine to the mind. "
 
-*** We are helping the needy ones in this covid situation. ***
-
-You can help us by contributing to our service.
-Help us financially. You can make payment on the mobile number 
-(" 8623804688 ").
-You can send us email for your kindness at (" jadhavsanket559@gmail.com ").
 
 Thankyou for giving your valuable time....!
 
