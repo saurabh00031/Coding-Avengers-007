@@ -180,7 +180,7 @@ def update_data(request):
         "hosp_info" : this_hsp,
         "my_usr_inf" : usr_inf
     }
-    return render(request, 'hsp_edit.html', hosp)
+    return render(request,'hsp_edit.html', hosp)
 
 @login_required
 @hospital_required
